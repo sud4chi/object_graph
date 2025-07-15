@@ -16,8 +16,8 @@ def index():
     x = df['name']
     y = df['number']
 
-    trace = go.Bar(x=x, y=y, name='数値')
-    layout = go.Layout(title='名前ごとの数値棒グラフ', xaxis=dict(title='名前'), yaxis=dict(title='数値'))
+    trace = go.Bar(x=x, y=y, name='枚数')
+    layout = go.Layout(title='タグごとのヒット回数', xaxis=dict(title='タグ'), yaxis=dict(title='枚数'))
     fig = go.Figure(data=[trace], layout=layout)
     graph_html = pyo.plot(fig, output_type='div')
 

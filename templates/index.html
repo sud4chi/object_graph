@@ -2,12 +2,35 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>グラフ表示アプリ</title>
+    <title>グラフと画像の表示</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>グラフ表示</h1>
-    <!-- グラフがここに埋め込まれる -->
-    {{ graph_html|safe }}
+    <h1>車のみレンダリングデータセット</h1>
+
+    <div class="graph">
+        {{ graph_html|safe }}
+    </div>
+
+    <h2>画像例</h2>
+	<div class="image-grid">
+		<div class="image-item">
+			<img src="{{ url_for('static', filename='2067e9ddb55d41a5a09d450a6bc5aec3.png') }}" alt="truck">
+			<div class="caption">truck</div>
+		</div>
+		<div class="image-item">
+			<img src="{{ url_for('static', filename='1f23c05032164ab9b0c520ece4cf9a5a.png') }}" alt="bus">
+			<div class="caption">bus</div>
+		</div>
+		<div class="image-item">
+			<img src="{{ url_for('static', filename='dc4d206f49e84612acada6ecdc5b8e0f.png') }}" alt="tank">
+			<div class="caption">tank</div>
+		</div>
+		<div class="image-item">
+			<img src="{{ url_for('static', filename='1f287cf20d824bceba323a2a16ee044d.png') }}" alt="scooter">
+			<div class="caption">scooter</div>
+		</div>
+	</div>
 </body>
 </html>
 
